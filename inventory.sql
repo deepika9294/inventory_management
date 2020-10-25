@@ -2,7 +2,8 @@
 CREATE TABLE `brands` (
   `brand_id` int(11) NOT NULL,
   `brand_name` varchar(255) NOT NULL,
-)
+   PRIMARY KEY (brand_id)
+);
 
 CREATE TABLE `users` (
   `user_id` int(4),
