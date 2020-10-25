@@ -45,3 +45,12 @@ CREATE TABLE `inventory_items` (
 INSERT INTO `inventory_items` (`item_id`, `brand_id`, `item_name`,`price`, `category_id`) VALUES
 (4, 5, 'WD Passport', '3000', 3),
 (5,2,'Galaxy S7', "49000",1);
+
+ALTER TABLE `brands`
+  ADD PRIMARY KEY (`brand_id`);
+
+ALTER TABLE `category`
+  ADD PRIMARY KEY (`category_id`);
+
+ALTER TABLE `inventory_items`
+  ADD PRIMARY KEY (`item_id`);
