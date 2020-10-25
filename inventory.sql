@@ -33,3 +33,15 @@ INSERT INTO `category` (`category_id`, `category_name`) VALUES
 (9, 'CPU Casing'),
 (10, 'Ear Phones'),
 (11, 'Desktop');
+
+CREATE TABLE `inventory_items` (
+  `item_id` int(11) NOT NULL,
+  `brand_id` int(11) NOT NULL,
+  `item_name` varchar(255) NOT NULL,
+  `price` varchar(255) NOT NULL,
+  `category_id` int(11) NOT NULL
+);
+
+INSERT INTO `inventory_items` (`item_id`, `brand_id`, `item_name`,`price`, `category_id`) VALUES
+(4, 5, 'WD Passport', '3000', 3),
+(5,2,'Galaxy S7', "49000",1);
