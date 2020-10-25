@@ -4,6 +4,18 @@ CREATE TABLE `brands` (
   `brand_name` varchar(255) NOT NULL,
 )
 
+CREATE TABLE `users` (
+  `user_id` int(4),
+  `user_name` varchar(16) NOT NULL,
+  `password` char(8) NOT NULL,
+   PRIMARY KEY (user_id)
+)
+
+INSERT INTO  `users` (`user_id`, `user_name`, `password`) VALUES
+(1, "Akanksha@shah", "Akkushah"),
+(2, "Deepika@goyal", "Deeps");
+
+
 INSERT INTO `brands` (`brand_id`, `brand_name`) VALUES
 (1, 'Nokia'),
 (2, 'Samsung'),
