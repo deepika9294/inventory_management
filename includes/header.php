@@ -10,34 +10,34 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light mt-3">
-  <a class="navbar-brand" href="#">Inventory</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-dark  mt-2">
+  <a class="navbar-brand text-white" href="#">Inventory</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav mr-auto ">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Dashboard <span class="sr-only">(current)</span></a>
+        <a class="nav-link text-white" href="#">Dashboard <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Brand</a>
+        <a class="nav-link text-white" href="#">Brand</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Category</a>
+        <a class="nav-link text-white" href="#">Category</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Supplier</a>
+        <a class="nav-link text-white" href="#">Supplier</a>
       </li><li class="nav-item">
-        <a class="nav-link" href="#">Customer</a>
+        <a class="nav-link text-white" href="#">Customer</a>
       </li><li class="nav-item">
-        <a class="nav-link" href="#">Inventory</a>
+        <a class="nav-link text-white" href="#">Inventory</a>
       </li>
       </ul>
       <ul class="navbar-nav">
       </li><li class="nav-item">
-        <a class="nav-link" href="#">Logout</a>
+        <a class="nav-link text-white" href="#">Logout</a>
       </li>
       </ul>
      
