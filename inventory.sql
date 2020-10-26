@@ -12,7 +12,7 @@ CREATE TABLE `users` (
    PRIMARY KEY (user_id)
 )
 
-INSERT INTO  `users` (`user_id`, `user_name`, `password`) VALUES
+INSERT INTO  `users` (`user_id`, `username`, `password`) VALUES
 (1, "Akanksha@shah", "Akkushah"),
 (2, "Deepika@goyal", "Deeps");
 
