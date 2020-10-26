@@ -11,4 +11,7 @@
         die("Connection Failed : " . $connect->connect_error);
         echo "fail";
     }
+    // else {
+    //     echo "pass";
+    // }
 ?>

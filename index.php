@@ -26,7 +26,6 @@ if($_POST) {
 	} else {
 		$sql = "SELECT * FROM users WHERE username = '$username'";
 		$result = $connect->query($sql);
-
 		if($result->num_rows == 1) {
 			$mainSql = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
 			$mainResult = $connect->query($mainSql);
