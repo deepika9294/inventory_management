@@ -2,16 +2,17 @@
 CREATE TABLE `brands` (
   `brand_id` int(11) NOT NULL,
   `brand_name` varchar(255) NOT NULL,
-)
+   PRIMARY KEY (brand_id)
+);
 
 CREATE TABLE `users` (
   `user_id` int(4),
-  `user_name` varchar(16) NOT NULL,
+  `username` varchar(16) NOT NULL,
   `password` char(8) NOT NULL,
    PRIMARY KEY (user_id)
 )
 
-INSERT INTO  `users` (`user_id`, `user_name`, `password`) VALUES
+INSERT INTO  `users` (`user_id`, `username`, `password`) VALUES
 (1, "Akanksha@shah", "Akkushah"),
 (2, "Deepika@goyal", "Deeps");
 
