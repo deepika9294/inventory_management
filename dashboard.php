@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="./custom/css/dashboard.css">
+    <link rel="stylesheet" href="./customs/css/dashboard.css">
 </head>
 <body>
 <div class="card mt-4 ml-4 mr-4">

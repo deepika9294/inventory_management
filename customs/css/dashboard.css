@@ -1,0 +1,25 @@
+body {
+  background: url("../images/common.jpeg");
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+table.dataTable thead th,
+table.dataTable thead td,
+table.dataTable.no-footer {
+  border-bottom: 1px solid #eee;
+}
+
+.tables td {
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.tables thead {
+  background-color: #eee;
+}
+#totalItems {
+  background-color: #8ac34a;
+  padding: 3%;
+  color: #ffffff;
+}
