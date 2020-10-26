@@ -67,3 +67,12 @@ ALTER TABLE `category`
 
 ALTER TABLE `inventory_items`
   ADD PRIMARY KEY (`item_id`);
+
+CREATE TABLE `item_stocks` (
+  `item_id` int(11) NOT NULL,
+  `quantity` int(11) NOT NULL,
+  `minimum_quantity` int(11) NOT NULL
+);
+INSERT INTO `item_stocks` (`item_id`, `quantity`, `minimum_quantity`) VALUES
+(4, 5, 3),
+(5, 4 ,1);
