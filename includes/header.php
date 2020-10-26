@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,7 +14,6 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto ">
       <li class="nav-item active">
@@ -37,7 +35,7 @@
       </ul>
       <ul class="navbar-nav">
       </li><li class="nav-item">
-        <a class="nav-link text-white" href="#">Logout</a>
+        <a class="nav-link text-white" href="logout.php">Logout</a>
       </li>
       </ul>
      
