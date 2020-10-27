@@ -76,3 +76,6 @@ CREATE TABLE `item_stocks` (
 INSERT INTO `item_stocks` (`item_id`, `quantity`, `minimum_quantity`) VALUES
 (4, 5, 3),
 (5, 4 ,1);
+
+ALTER TABLE `inventory_items`
+  MODIFY `item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
