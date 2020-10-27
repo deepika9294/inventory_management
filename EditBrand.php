@@ -10,7 +10,8 @@
     $brand_name = "";
     $brand_id = "";
 
-    if (isset($_GET['edit'])){
+    if (isset($_GET['edit']))
+    {
         $id = $_GET['edit'];
         $result = $connect->query("SELECT * FROM brands WHERE brand_id = '$id' ") or die($connect->error());
         if ($result->num_rows == 1){
@@ -43,36 +44,60 @@
             if($id == $new_brand_id && $new_brand_name == $old_brand_name){
                 header('location: brand.php');
             }
+            // else {
+            //     $sql ="UPDATE brands SET brand_id = '$new_brand_id', brand_name = '$new_brand_name' WHERE brand_id = '$id'";// or die($connect->error());
+            //     if($connect->query($sql) === TRUE) {
+            //         header('location: http://localhost/inventory/brand.php');	
+            //     } else {
+            //         echo 'Failed!';
+            //     }
+                // $connect->close();
+            // }
              else if($id != $new_brand_id && $new_brand_name == $old_brand_name){
                 $result = $connect->query("SELECT * from brands where brand_id = '$new_brand_id'");
                 if($result->num_rows == 0 ){
-                    $connect->query("UPDATE brands SET brand_id = '$new_brand_id' WHERE brand_id = '$id'"); //or die($connect->error());
-                    header('location : brand.php');  
+                   $sql = "UPDATE brands SET brand_id = '$new_brand_id' WHERE brand_id = '$id'"; //or die($connect->error());
+                   if($connect->query($sql) === TRUE) {
+                        header('location: http://localhost/inventory/brand.php');	
+                    } else {
+                        echo 'Failed!';
+                    }
                 }
                 else{
                     $errors[] = "Brand ID already in use";
                 }
+
             }
             else if ($id == $new_brand_id && $new_brand_name != $old_brand_name){
                 $result = $connect->query("SELECT * from brands where brand_name = '$new_brand_name'");
                 if($result->num_rows == 0 ){
-                    $connect->query("UPDATE brands SET brand_name = '$new_brand_name' WHERE brand_id = '$id'"); //or die($connect->error());
-                    header('location : brand.php');  
+                    $sql = "UPDATE brands SET brand_name = '$new_brand_name' WHERE brand_id = '$id'"; //or die($connect->error());
+                    if($connect->query($sql) === TRUE) {
+                        header('location: http://localhost/inventory/brand.php');	
+                    } else {
+                        echo 'Failed!';
+                    }  
                 }
                 else{
                     $errors[] = "Brand Name already in use";
                 }
+
             }
             else if($id != $new_brand_id && $new_brand_name != $old_brand_name){
                 $result = $connect->query("SELECT * from brands where brand_id = '$new_brand_id'");
                 $sresult = $connect->query("SELECT * from brands where brand_name = '$new_brand_name'");
                 if($result->num_rows == 0 && $sresult->num_rows == 0 ){ 
-                    $connect->query("UPDATE brands SET brand_id = '$new_brand_id', brand_name = '$new_brand_name' WHERE brand_id = '$id'");// or die($connect->error());
-                    header('location : brand.php');  
+                    $sql = "UPDATE brands SET brand_id = '$new_brand_id', brand_name = '$new_brand_name' WHERE brand_id = '$id'";// or die($connect->error());
+                    if($connect->query($sql) === TRUE) {
+                        header('location: http://localhost/inventory/brand.php');	
+                    } else {
+                        echo 'Failed!';
+                    }  
                 }
                 else{
                     $errors[] = "Invalid update request";
                 }
+
             }
         }
         

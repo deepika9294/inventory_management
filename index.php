@@ -4,7 +4,7 @@ require_once "db_connect.php";
 
 session_start();
 
-if(isset($_SESSION['userId'])){
+if(isset($_SESSION['user_id'])){
 	header('location: dashboard.php');
 }
 
@@ -34,7 +34,7 @@ if($_POST) {
 			if($mainResult->num_rows == 1) {
 				$value = $mainResult->fetch_assoc();
 				$user_id = $value['user_id'];
-				$_SESSION['userId'] = $user_id;
+				$_SESSION['user_id'] = $user_id;
 				header('location: dashboard.php');	
 			} else{
 				
