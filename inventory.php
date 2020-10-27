@@ -110,7 +110,7 @@
   <div class="form-group">
     <label class="control-label col-sm-3" for="brandName" required>Brand Name:</label>
     <div class="col-sm-9"> 
-      <select class="form-control" id="brandName" name="brandName">
+      <select class="form-control" id="brandName" name="brandName" required>
         <option value="">---Select---</option>
         <?php
         $sql = "SELECT brand_id, brand_name FROM brands";
@@ -126,7 +126,7 @@
   <div class="form-group">
     <label class="control-label col-sm-9" for="categoryName" required>Category Name:</label>
     <div class="col-sm-9"> 
-      <select class="form-control" id="categoryName" name="categoryName">
+      <select class="form-control" id="categoryName" name="categoryName" required>
         <option value="">---Select---</option>
         <?php
         $sql = "SELECT category_id, category_name FROM category";
