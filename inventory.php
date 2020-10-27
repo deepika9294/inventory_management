@@ -43,6 +43,8 @@
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addItemModal">
             Add
         </button>
+        <a href="editItem.php" class="btn btn-secondary" role="button">Update Product</a>
+
 </h5>
         
     
