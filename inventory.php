@@ -94,7 +94,8 @@
               <select class="form-control" id="item_id" name="item_id" required>
                 <option value="">---Select---</option>
                 <?php
-                $sql = "SELECT item_id, item_name FROM inventory_items";
+                $sql = "SELECT i.item_id, item_name FROM inventory_items as i LEFT JOIN item_stocks as s ON i.item_id = s.item_id WHERE s.item_id is NULL
+                ";
                 $result = $connect->query($sql);
                 while ($row = $result->fetch_array()){
                   echo "<option value='".$row[0]."'>".$row[1]."</option>";
