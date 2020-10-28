@@ -43,7 +43,6 @@
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addItemModal">
             Add
         </button>
-        <a href="editItem.php" class="btn btn-secondary" role="button">Update Product</a>
 
 </h5>
         
@@ -59,6 +58,8 @@
                         <th style="text-align: center;">Brand</th>
                         <th style="text-align: center;">Category</th>
                         <th style="text-align: center;">Price</th>
+                        <th style="text-align: center;">Action</th>
+
                         </tr>
                     </thead>
 
