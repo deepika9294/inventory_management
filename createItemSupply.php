@@ -33,7 +33,11 @@ if($_POST) {
             $sql2 = "INSERT INTO item_stocks (`item_id`, `quantity`,`minimum_quantity`) VALUES ($item_id, $quantity, 0)";
         }
     
+        if($connect->query($sql) === TRUE and $connect->query($sql2) === TRUE ) {
 
+            header('location: http://localhost/inventory/itemSupply.php');	
+    
+        } 
     }
     catch (\Throwable $e){
         $connect->rollback();
@@ -42,13 +46,7 @@ if($_POST) {
     }
 
 	
-    if($connect->query($sql) === TRUE and $connect->query($sql2) === TRUE ) {
-
-		header('location: http://localhost/inventory/itemSupply.php');	
-
-	} else {
-	 	echo "Failed!";
-	}
+    
 
 	$connect->close();
 
