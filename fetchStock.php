@@ -11,12 +11,21 @@ $result = $connect->query($sql);
 $output = array('data' => array());
 
 if($result->num_rows > 0) { 
+
  while($row = $result->fetch_array()) {
+ $edit = "<a href='editStock.php?item_id=".$row[0]."&item_name=".$row[1]."'><button class='btn btn-primary'>Edit</button></a>";
+    if($row[2] < $row[3]){
+        $row_1 = "<p class = 'bg-danger'>".$row[1]."</p>";
+    }
+    else {
+        $row_1 = "<p class = 'bg-success'>".$row[1]."</p>";
+    }
  	$output['data'][] = array( 		
         $row[0],
-        $row[1],
+        $row_1,
         $row[2],
         $row[3],
+        $edit
      ); 	
  }
 }
