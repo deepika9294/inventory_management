@@ -114,7 +114,7 @@ CREATE TABLE `transaction` (
 );
 
 INSERT INTO `transaction` VALUES
-(1, "17-09-2020", "card", 0, 1000, 1000);
+(1, "17-09-2020", "card", 0, 6000, 6000);
 
 CREATE TABLE `purchased`(
   item_id int(11) NOT NULL,
