@@ -213,7 +213,6 @@
 
 
 
-<!-- Modal for stock-->
 
 
 </body>

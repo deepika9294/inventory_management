@@ -24,7 +24,7 @@
                 <h5 class="card-header">Supplied Items</h5>
                 <div class="card-body">
                     <h5 class="card-title">Details of the items supplied from.</h5>
-                    <a href="purchaseDetails.php" class="btn btn-primary">Click Here</a>
+                    <a href="itemSupply.php" class="btn btn-primary">Click Here</a>
                 </div>
             </div>
         </div>
