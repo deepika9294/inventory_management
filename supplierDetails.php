@@ -30,6 +30,8 @@
                         <th style="text-align: center;">Supplier Email</th>
                         <th style="text-align: center;">Supplier Phone</th>
                         <th style="text-align: center;">Supplier Address</th>
+                        <th style="text-align: center;">Action</th>
+
                         </tr>
                     </thead>
                 </table>
