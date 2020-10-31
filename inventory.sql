@@ -128,8 +128,23 @@ CREATE TABLE `purchased`(
 INSERT INTO `purchased` VALUES
 (4, 1, 2, 1);
 
+CREATE TABLE `supplier` (
+  `supplier_id`  int(11),
+  `supplier_name` varchar(20) NOT NULL,
+  `supplier_email` varchar(30) NOT NULL,
+  `supplier_phone` char(10) NOT NULL,
+  `supplier_address` varchar(100),
+   PRIMARY KEY(`supplier_id`)
+);
+ALTER TABLE `supplier`
+  MODIFY `supplier_id` int(11) NOT NULL AUTO_INCREMENT;
 
 
+ALTER TABLE `supplier`
+  MODIFY `supplier_phone` char(10) NOT NULL UNIQUE,
+  MODIFY `supplier_email` char(30) NOT NULL UNIQUE;
 
 
-
+INSERT INTO `supplier`(`supplier_id`,`supplier_name`,`supplier_email`, `supplier_phone`,`supplier_address`) VALUES
+(1, "Dhanashri Ahir", "dhanashri@gmail.com", 8934767000, "Akola, Mahrashtra" ),
+(2, "Sakshi Kalekar", "saksi@gmail.com", 8934567111, "Kolhapur, Mahrashtra" );
