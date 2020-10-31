@@ -14,6 +14,7 @@ $output = array('data' => array());
 
 if($result->num_rows > 0) { 
  while($row = $result->fetch_array()) {
+	$edit = "<a href='editItem.php?item_id=".$row[0]."'><button class='btn btn-primary'>Edit</button></a>";
  	$output['data'][] = array( 		
         $row[0],
         $row[1],
