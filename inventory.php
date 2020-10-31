@@ -10,7 +10,7 @@
 <body>
 
     
-<div class="container">
+<div class="container container-shrinked">
     <div class="card mt-4 ml-3 mr-3">
         <h5 class="card-header">
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addStockModal">
@@ -29,6 +29,7 @@
                         <th style="text-align: center;">Quantity</th>
                         <th style="text-align: center;">Minimum Quantity</th>
                         <th style="text-align: center;">Action</th>
+                        
 
                         </tr>
                     </thead>
@@ -63,7 +64,6 @@
                         <th style="text-align: center;">Category</th>
                         <th style="text-align: center;">Price</th>
                         <th  style="text-align: center;">Action</th>
-
                         </tr>
                     </thead>
 
@@ -207,12 +207,6 @@
   </div>
 </div>
  
-
-
-
-
-
-
 
 
 </body>
