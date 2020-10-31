@@ -32,12 +32,12 @@
         <a class="nav-link text-white" href="brand.php">Brand</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white" href="#">Category</a>
+        <a class="nav-link text-white" href="category.php">Category</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white" href="#">Supplier</a>
+        <a class="nav-link text-white" href="supplier.php">Supplier</a>
       </li><li class="nav-item">
-        <a class="nav-link text-white" href="#">Customer</a>
+        <a class="nav-link text-white" href="Basecustomer.php">Customer</a>
       </li><li class="nav-item">
         <a class="nav-link text-white" href="inventory.php ">Inventory</a>
       </li>
