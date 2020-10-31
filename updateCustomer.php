@@ -70,7 +70,7 @@
                     $sql = " UPDATE customer 
                             SET customer_name = '$new_customer_name', 
                             customer_email = '$new_customer_email', 
-                            customer_phone = '$new_customer_phone, 
+                            customer_phone = '$new_customer_phone', 
                             customer_address = '$new_customer_address'
                             WHERE customer_id = '$id' ";
 
