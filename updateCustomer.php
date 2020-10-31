@@ -15,7 +15,6 @@
     if (isset($_GET['update']))
     {
         $id = $_GET['update'];
-
         $result = $connect->query("SELECT * FROM customer WHERE customer_id = '$id' ") or die($connect->error());
         if ($result->num_rows == 1){
             $row = $result->fetch_array();
@@ -38,23 +37,33 @@
 
         if($new_customer_name == ""){
             $errors[] = "Name is required";
+            echo 'F!';
+
         }
         if($new_customer_phone == ""){
             $errors[] = "Phone Number is required";
+            echo 'F!';
+
         }
         if($new_customer_email == ""){
             $errors[] = "Customer Email is required";
+            echo 'F!';
+
         }
 
         else{
             $result = $connect->query("SELECT customer_id FROM customer WHERE customer_phone = '$new_customer_phone' AND customer_id != '$id'");
             if($result->num_rows == 1){
                 $errors[] = "Phone number already exsits";
+                echo 'F!';
+
             }
             else{
                 $result = $connect->query("SELECT customer_id FROM customer WHERE customer_email = '$new_customer_email' AND customer_id != '$id' ");
                 if($result->num_rows == 1){
                     $errors[] = "Email already exsits";
+                    echo 'F!';
+
                 }
                 else{
                     #update the customer into database
@@ -69,7 +78,7 @@
                          header('location: http://localhost/inventory/customerDetails.php');	
                     }
                     else {
-                         echo 'Failed!';
+                         echo 'Faile!';
                     }
     
                 }
