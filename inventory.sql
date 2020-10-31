@@ -68,14 +68,83 @@ ALTER TABLE `category`
 ALTER TABLE `inventory_items`
   ADD PRIMARY KEY (`item_id`);
 
+ALTER TABLE `inventory_items`
+  MODIFY `item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
 CREATE TABLE `item_stocks` (
   `item_id` int(11) NOT NULL,
   `quantity` int(11) NOT NULL,
   `minimum_quantity` int(11) NOT NULL
 );
+
 INSERT INTO `item_stocks` (`item_id`, `quantity`, `minimum_quantity`) VALUES
 (4, 5, 3),
 (5, 4 ,1);
 
-ALTER TABLE `inventory_items`
-  MODIFY `item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+CREATE TABLE `customer` (
+  `customer_id`  int(11),
+  `customer_name` varchar(20) NOT NULL,
+  `customer_email` varchar(30) NOT NULL,
+  `customer_phone` char(10) NOT NULL,
+  `customer_address` varchar(100),
+   PRIMARY KEY(`customer_id`)
+);
+
+ALTER TABLE `customer`
+  MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `customer`
+  MODIFY `customer_phone` char(10) NOT NULL UNIQUE,
+  MODIFY `customer_email` char(30) NOT NULL UNIQUE;
+  
+
+INSERT INTO `customer`(`customer_id`,`customer_name`,`customer_email`, `customer_phone`,`customer_address`) VALUES
+(1, "Akanksha Shah", "akanksha@gmail.com", 8934767893, "Sangli, Mahrashtra" ),
+(2, "Deepika Goyal", "deepika@gmail.com", 8934567893, "Pune, Mahrashtra" );
+
+CREATE TABLE `transaction` (
+  transaction_id int(11),
+  date varchar(12),
+  mode varchar(20),
+  discount int(5),
+  selling_price int(10),
+  amount int(10)
+
+  PRIMARY KEY(`transaction_id`)
+);
+
+INSERT INTO `transaction` VALUES
+(1, "17-09-2020", "card", 0, 6000, 6000);
+
+CREATE TABLE `purchased`(
+  item_id int(11) NOT NULL,
+  customer_id int(11) NOT NULL,
+  quantity int(10),
+  transaction_id int(11) NOT NULL
+  -- PRIMARY KEY (`item_id`,`customer_id`, `transaction_id`),
+  -- FOREIGN KEY (`item_id`) REFERENCES inventory_items(`item_id`) 
+);
+
+INSERT INTO `purchased` VALUES
+(4, 1, 2, 1);
+
+CREATE TABLE `supplier` (
+  `supplier_id`  int(11),
+  `supplier_name` varchar(20) NOT NULL,
+  `supplier_email` varchar(30) NOT NULL,
+  `supplier_phone` char(10) NOT NULL,
+  `supplier_address` varchar(100),
+   PRIMARY KEY(`supplier_id`)
+);
+ALTER TABLE `supplier`
+  MODIFY `supplier_id` int(11) NOT NULL AUTO_INCREMENT;
+
+
+ALTER TABLE `supplier`
+  MODIFY `supplier_phone` char(10) NOT NULL UNIQUE,
+  MODIFY `supplier_email` char(30) NOT NULL UNIQUE;
+
+
+INSERT INTO `supplier`(`supplier_id`,`supplier_name`,`supplier_email`, `supplier_phone`,`supplier_address`) VALUES
+(1, "Dhanashri Ahir", "dhanashri@gmail.com", 8934767000, "Akola, Mahrashtra" ),
+(2, "Sakshi Kalekar", "saksi@gmail.com", 8934567111, "Kolhapur, Mahrashtra" );
