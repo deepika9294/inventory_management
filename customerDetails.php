@@ -30,6 +30,7 @@
                         <th style="text-align: center;">Customer Email</th>
                         <th style="text-align: center;">Customer Phone</th>
                         <th style="text-align: center;">Customer Address</th>
+                        <th style="text-align: center;">Action</th>
                         </tr>
                     </thead>
                 </table>
