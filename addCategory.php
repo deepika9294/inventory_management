@@ -3,9 +3,7 @@
     require_once "includes/header.php";
 
 
-    if(isset($_SESSION['user_id'])){
-        header('location: dashboard.php');
-    }
+    
 
     $errors = array();
     
