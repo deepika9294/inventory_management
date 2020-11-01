@@ -2,74 +2,56 @@
 require_once 'core.php';
 
 $valid['success'] = array('success' => false, 'messages' => array());
-
+$check = 0;
 if($_POST) {	
-
+    $errors = array();
 	$customer_id = $_POST['customer_id'];
     $date = $_POST['date'];
     $item_id = $_POST['ItemName'];
     $quantity = $_POST['quantity'];
     $discount = $_POST['discount'];
     $mode = "cash";
-    
-    $errors = array();
-    $price = 80;
-    $amount = 80;
-    $sql = "INSERT INTO `transaction` ( `date`, `mode`, `discount`, `selling_price`, `amount`) VALUES ('$date', '$mode', '$discount', '$price', '$amount')";
-    if($connect->query($sql) === TRUE) {
-        // header('location: http://localhost/inventory/purchaseDetails.php');	
-        // $result = $connect->query("SELECT `transaction_id` FROM `transaction` WHERE `date` = '$date' AND `mode` = '$mode' AND `discount` = '$discount' AND `selling_price` = '$price' AND `amount` = '$amount' ");
-        // $transaction_id = $result->fetch_assoc()['transaction_id'];
 
-        // $result_customer = $connect->query("SELECT `customer_id` FROM customer WHERE `customer_id` = '$customer_id'");
-        // $customer_id = $result_customer->fetch_assoc()['customer_id'];
+    // fetching price of that item
+    $price_query = "SELECT price from `inventory_items` WHERE item_id = '$item_id'";
+    $res = $connect->query($price_query);
+    $price = $res->fetch_assoc()['price'];
+    $selling_price = $price * $quantity;
+    $amount = $selling_price - $discount;
 
-        $sql3 = "INSERT INTO `purchased`( `item_id`, `customer_id`, `quantity`, `transaction_id`) VALUES ('$item_id', '2', '$quantity', '53')";
-        if($connect->query($sql3) === TRUE) {
-            header('location : http://localhost/inventory/purchaseDetails.php');
+    $qry = "SELECT `quantity`, `minimum_quantity` from `item_stocks` where item_id = '$item_id' ";
+    $re = $connect->query($qry);
+    $row = $re->fetch_array();
+    $old_quantity = $row[0];
 
+        try {
+            $sql = mysqli_query($connect,"INSERT INTO `transaction` ( `date`, `mode`, `discount`, `selling_price`, `amount`) VALUES ('$date', '$mode', '$discount', '$selling_price', '$amount')");
+            // fetching last details
+            $transaction_id = mysqli_insert_id($connect);
+            $sql3 = mysqli_query($connect, "INSERT INTO `purchased`(`item_id`, `customer_id`, `quantity`, `transaction_id`) VALUES ('$item_id', '$customer_id', '$quantity', '$transaction_id')");
+            // updating it 
+            $sql4 = mysqli_query($connect, "UPDATE item_stocks SET `quantity` = '$old_quantity' -'$quantity' WHERE item_id = '$item_id' ");
+            if($sql4) {
+                $connect->close();
+
+                header('location:http://localhost/inventory/purchaseDetails.php');
+                return;
+            }
+
+            else {
+                echo "Failed";
+            }
         }
-        else {
-            echo "f";
+        catch (\Throwable $e){
+            $connect->rollback();
+            throw $e;
+    
         }
-    }
-    else {
-        echo "f";
-    }
-    
-    
-    // try
-        // {
-        //     $sql = "INSERT INTO `transaction` ( `date`, `mode`, `discount`, `selling_price`, `amount`) VALUES ('$date', '$mode', '$discount', '$price', '$amount')";
-        //     $connect->query($sql);
-
-        //     // $result = $connect->query("SELECT `transaction_id` FROM `transaction` WHERE `date` = '$date' AND `mode` = '$mode' AND `discount` = '$discount' AND `selling_price` = '$price' AND `amount` = '$amount' ");
-        //     // $transaction_id = $result->fetch_assoc()['transaction_id'];
-
-
-        //     // $result_customer = $connect->query("SELECT `customer_id` FROM customer WHERE `customer_id` = '$customer_id'");
-        //     // $customer_id = $result_customer->fetch_assoc()['customer_id'];
-
-        //     // $sql3 = "INSERT INTO `purchased`( `item_id`, `customer_id`, `quantity`, `transaction_id`) VALUES ('$item_id', '$customer_id', '$quantity', '$transaction_id')";
-        //     // $connect->query($sql3);
-
-        //     // $sql4 = "UPDATE item_stocks SET `quantity` = '$old_quantity' -'$quantity' WHERE item_id = '$item_id' ";
-        //     // $connect->query($sql4);
-        //     header('location : http://localhost/inventory/purchaseDetails.php');
-            
-            
-            
-        // }
-        // catch(Throwable $e){
-        //         $connect->rollback();
-        //         throw $e;
-        //         echo "ISSUE";
-        // }
         
-
-
-        $connect->close();
         echo json_encode($valid);
-     
+        
+    
     }
+
+       
 ?>
