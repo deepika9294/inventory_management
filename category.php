@@ -32,6 +32,9 @@
 
 
 <html>
+<head>
+    <link rel="stylesheet" href="./customs/css/dashboard.css">
+</head>
 <div class = "container">
     <div>
         <h1 style="position: relative;margin-top: 8%;">Manage Category</h1>
