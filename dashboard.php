@@ -14,7 +14,7 @@
     
     <div class="row" style= "margin-top: 40px">
         <div class="col-md-4">
-        <div class="card text-white bg-primary mb-3" style="max-width: 23rem; min-height:10rem">
+        <div class="card text-white bg-info mb-3" style="max-width: 23rem; min-height:10rem">
         <div class="card-header">Total Customers</div>
         <div class="card-body">
             <p class="card-text">Some  content.</p>
@@ -80,7 +80,7 @@
         </div>
         </div>
         <div class="col-md-4">
-        <div class="card text-white bg-primary mb-3" style="max-width: 23rem;min-height:10rem">
+        <div class="card text-white bg-info mb-3" style="max-width: 23rem;min-height:10rem">
         <div class="card-header">Money Spent</div>
         <div class="card-body">
             <p class="card-text">Some content.</p>

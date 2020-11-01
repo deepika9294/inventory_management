@@ -19,7 +19,7 @@
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-dark  mt-2">
-  <a class="navbar-brand text-white ml-4" style= "font-size: 1.5rem;" href="dashboard.php">Inventory System</a>
+  <a class="navbar-brand text-white ml-4" style= "font-size: 1.5rem;" href="dashboard.php"><img src = "customs/images/inventory_logo.png" style="max-width:60px;max-height:40px;"/> Inventory System</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
