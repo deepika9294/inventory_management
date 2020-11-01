@@ -29,7 +29,7 @@ if($_POST) {
     $min_quantity = $row[1]; 
 
     if($old_quantity - $quantity >= $min_quantity && $old_quantity - $quantity >= 0){
-        if($discount < $price){
+        if($discount < $price * $quantity ){
             $amount =  ( $price * $quantity ) - $discount;
         }
         else{
@@ -76,11 +76,4 @@ if($_POST) {
     $_SESSION['error'] = $errors;
     $connect->close();
     header('location: http://localhost/inventory/purchaseDetails.php');
-}                                                                          
-
- 
-
-?>
-
-
-    
+}                                     

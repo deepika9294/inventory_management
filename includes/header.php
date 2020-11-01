@@ -1,3 +1,7 @@
+<?php
+    require_once "core.php"
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,31 +23,31 @@
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-dark  mt-2">
-  <a class="navbar-brand text-white" href="#">Inventory</a>
+  <a class="navbar-brand text-white ml-4" style= "font-size: 1.5rem;" href="dashboard.php"><img src = "customs/images/inventory_logo.png" style="max-width:60px;max-height:40px;"/> Inventory System</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <div class="collapse navbar-collapse ml-4" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto ">
       <li class="nav-item active">
-        <a class="nav-link text-white" href="#">Dashboard <span class="sr-only">(current)</span></a>
+        <a class="nav-link text-white" href="dashboard.php">Dashboard <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link text-white" href="brand.php">Brand</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white" href="#">Category</a>
+        <a class="nav-link text-white" href="category.php">Category</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white" href="#">Supplier</a>
+        <a class="nav-link text-white" href="supplier.php">Supplier</a>
       </li><li class="nav-item">
-        <a class="nav-link text-white" href="#">Customer</a>
+        <a class="nav-link text-white" href="Basecustomer.php">Customer</a>
       </li><li class="nav-item">
         <a class="nav-link text-white" href="inventory.php ">Inventory</a>
       </li>
       </ul>
-      <ul class="navbar-nav">
-      </li><li class="nav-item">
+      <ul class="navbar-nav mr-4">
+      <li class="nav-item">
         <a class="nav-link text-white" href="logout.php">Logout</a>
       </li>
       </ul>

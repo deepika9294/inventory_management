@@ -64,7 +64,6 @@
 
     
     <div class="card mt-4 ml-3 mr-3">
-        <h5 class="card-header"></h5>
     
         <div class="card-body">
             <h4 class="card-title"> Transaction Details </h4>
@@ -114,7 +113,10 @@
     </div>
   </div>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
    <div class="form-group">
     <label class="control-label col-sm-9" for="customer_phone">Phone</label>
     <div class="col-sm-9">
@@ -149,7 +151,11 @@
       <select class="form-control" id="ItemName" name="ItemName" required>
         <option value="">---Select---</option>
         <?php
+<<<<<<< HEAD
         $sql = "SELECT item_id, item_name FROM inventory_items";
+=======
+        $sql = "SELECT s.item_id, i.item_name FROM inventory_items as i INNER JOIN item_stocks as s ON i.item_id = s.item_id";
+>>>>>>> origin/master
         $result = $connect->query($sql);
         while ($row = $result->fetch_array()){
           echo "<option value='".$row[0]."'>".$row[1]."</option>";
@@ -199,5 +205,9 @@
 
 <script type="text/javascript" src="customs/js/purchaseDetails.js"></script>
 <script type="text/javascript" src="customs/js/TransactionDetails.js"></script>
+<<<<<<< HEAD
 </html>
 
+=======
+</html>
+>>>>>>> origin/master

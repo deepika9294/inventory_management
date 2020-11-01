@@ -26,3 +26,5 @@ if($result->num_rows > 0) {
 }
 $connect->close();
 echo json_encode($output);
+
+?>

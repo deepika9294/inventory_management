@@ -31,7 +31,7 @@
         </h5>
         
         <div class="card-body">
-            <h4 class="card-title"> Details </h4>
+            <h4 class="card-title"> Supplied Items From </h4>
             <div class="card-text">
                 <table class ="tables" id ="manageItemSupplyTable" style="width:100%;">
                     <thead>

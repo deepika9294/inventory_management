@@ -22,7 +22,7 @@ if($_POST) {
 
     }else {
         echo "Failed";
-        header('location : supplierDetails.php');
+        header('location: supplierDetails.php');
     }
 
 

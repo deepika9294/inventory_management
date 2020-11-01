@@ -10,10 +10,10 @@
 <body>
 
     
-<div class="container">
+<div class="container container-shrinked">
     <div class="card mt-4 ml-3 mr-3">
         <h5 class="card-header">
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addStockModal">
+        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#addStockModal">
             Add
         </button>
         </h5>
@@ -29,6 +29,7 @@
                         <th style="text-align: center;">Quantity</th>
                         <th style="text-align: center;">Minimum Quantity</th>
                         <th style="text-align: center;">Action</th>
+                        
 
                         </tr>
                     </thead>
@@ -40,11 +41,19 @@
     </div>
 
 
-
+<?php if($_GET) {
+        if($_GET['error']) {
+          $value = $_GET['error'];
+          echo '<div style= "width: 40%; margin-top:30px; left: 30%;" class="alert alert-danger alert-dismissible fade show" "row justify-content-center" role="alert">
+          '.$value.'<button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button></div>';			
+        }
+         							
+    
+} ?>
 
     <div class="card mt-4 ml-3 mr-3">
     <h5 class="card-header">
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addItemModal">
+        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#addItemModal">
             Add
         </button>
 
@@ -63,7 +72,6 @@
                         <th style="text-align: center;">Category</th>
                         <th style="text-align: center;">Price</th>
                         <th  style="text-align: center;">Action</th>
-
                         </tr>
                     </thead>
 
@@ -81,6 +89,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
+      
         <h5 class="modal-title" id="exampleModalLabel">Add item in a stock</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
@@ -167,7 +176,7 @@
   </div>
 
   <div class="form-group">
-    <label class="control-label col-sm-3" for="brandName" required>Brand Name:</label>
+    <label class="control-label col-sm-9" for="brandName" required>Brand Name:</label>
     <div class="col-sm-9"> 
       <select class="form-control" id="brandName" name="brandName" required>
         <option value="">---Select---</option>
@@ -207,13 +216,6 @@
   </div>
 </div>
  
-
-
-
-
-
-
-<!-- Modal for stock-->
 
 
 </body>

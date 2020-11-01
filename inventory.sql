@@ -130,3 +130,38 @@ CREATE TABLE `purchased`(
 INSERT INTO `purchased` VALUES
 (4, 1, 2, 1);
 
+CREATE TABLE `supplier` (
+  `supplier_id`  int(11),
+  `supplier_name` varchar(20) NOT NULL,
+  `supplier_email` varchar(30) NOT NULL,
+  `supplier_phone` char(10) NOT NULL,
+  `supplier_address` varchar(100),
+   PRIMARY KEY(`supplier_id`)
+);
+ALTER TABLE `supplier`
+  MODIFY `supplier_id` int(11) NOT NULL AUTO_INCREMENT;
+
+
+ALTER TABLE `supplier`
+  MODIFY `supplier_phone` char(10) NOT NULL UNIQUE,
+  MODIFY `supplier_email` char(30) NOT NULL UNIQUE;
+
+
+INSERT INTO `supplier`(`supplier_id`,`supplier_name`,`supplier_email`, `supplier_phone`,`supplier_address`) VALUES
+(1, "Dhanashri Ahir", "dhanashri@gmail.com", 8934767000, "Akola, Mahrashtra" ),
+(2, "Sakshi Kalekar", "saksi@gmail.com", 8934567111, "Kolhapur, Mahrashtra" );
+
+CREATE TABLE `item_suppliers` (
+  `supplier_id`  int(11) NOT NULL,
+  `supplied_date` DATE NOT NULL,
+  `delivered_date` DATE NOT NULL,
+  `price` int(10) NOT NULL,
+  `quantity` int(10) NOT NULL,
+  `item_id` int(11) NOT NULL
+);
+INSERT INTO `item_suppliers`(`supplier_id`,`supplied_date`,`delivered_date`,`price`,`quantity`,`item_id`) VALUES
+(1,STR_TO_DATE('06-01-2019', '%m-%d-%Y'),STR_TO_DATE('08-01-2019', '%m-%d-%Y'), 400, 3 ,8);
+
+
+ALTER TABLE `item_suppliers`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;

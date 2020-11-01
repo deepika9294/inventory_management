@@ -1,4 +1,3 @@
-
 <?php 	
 
 require_once 'core.php';
@@ -25,3 +24,4 @@ if($_POST) {
 
 	echo json_encode($valid);
  
+}

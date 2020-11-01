@@ -7,6 +7,7 @@
 <html>
 <head>
     <link rel="stylesheet" href="./customs/css/dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
 </head>
 <body>
 <!-- ------------------------------------------------------------------------------------------->
@@ -16,7 +17,7 @@
     <div class="row" style= "margin-top: 40px">
         <div class="col-md-4">
         <div class="card text-white bg-primary mb-3" style="max-width: 23rem; min-height:10rem">
-        <div class="card-header">CUSTOMERS</div>
+        <div class="card-header" style="font-size: 1.2rem"><b>CUSTOMERS</b></div>
         <div class="card-body">
             <p class="card-text" >
             <?php 
@@ -32,7 +33,7 @@
         </div>
         <div class="col-md-4">
         <div class="card bg-light mb-3" style="max-width: 23rem; min-height:10rem">
-        <div class="card-header">SUPPLIERS</div>
+        <div class="card-header" style="font-size: 1.2rem"><b>SUPPLIERS</b></div>
         <div class="card-body">
             <p class="card-text">
             <?php 
@@ -49,7 +50,7 @@
         </div>
         <div class="col-md-4">
         <div class="card text-white bg-success mb-3" style="max-width: 23rem; min-height:10rem">
-        <div class="card-header">PURCHASES</div>
+        <div class="card-header" style="font-size: 1.2rem"><b>PURCHASES</b></div>
         <div class="card-body">
             <p class="card-text">
             <?php 
@@ -71,7 +72,7 @@
 
         <div class="col-md-6">
         <div class="card text-white bg-dark mb-3" style="max-width: 35rem; min-height:8rem">
-        <div class="card-header">BRANDS</div>
+        <div class="card-header" style="font-size: 1.2rem"><b>BRANDS</b></div>
         <div class="card-body">
             <p class="card-text">
             <?php 
@@ -90,7 +91,7 @@
 
         <div class="col-md-6">
         <div class="card text-white bg-dark mb-3" style="max-width: 35rem; min-height:8rem">
-        <div class="card-header">CATEGORY</div>
+        <div class="card-header" style="font-size: 1.2rem"><b>CATEGORY</b></div>
         <div class="card-body">
             <p class="card-text">
             <?php 
@@ -110,7 +111,7 @@
       <div class="row ">
         <div class="col-md-4">
         <div class="card text-white bg-success mb-3" style="max-width: 23rem;min-height:10rem">
-        <div class="card-header">INVENTORY ITEMS</div>
+        <div class="card-header" style="font-size: 1.2rem"><b>INVENTORY ITEMS</b></div>
         <div class="card-body">
             <p class="card-text">
             <?php 
@@ -127,7 +128,7 @@
         </div>
         <div class="col-md-4">
         <div class="card bg-light mb-3" style="max-width: 23rem; min-height:10rem">
-        <div class="card-header">INVENTORY STOCK</div>
+        <div class="card-header" style="font-size: 1.2rem"><b>INVENTORY STOCK</b></div>
         <div class="card-body">
             <p class="card-text">
             <?php 
@@ -144,7 +145,7 @@
         </div>
         <div class="col-md-4">
         <div class="card text-white bg-primary mb-3" style="max-width: 23rem;min-height:10rem">
-        <div text-align: center class="card-header">TRANSACTIONS</div>
+        <div text-align: center class="card-header" style="font-size: 1.2rem"><b>TRANSACTIONS</b></div>
         <div class="card-body">
             <p class="card-text">
             <?php 
@@ -163,14 +164,6 @@
     </div>
 
 </div>
-
-
-
-<!-- ---------------------------------------------------------------- -->
-
-
-
-
 
 </body>
 </html>
