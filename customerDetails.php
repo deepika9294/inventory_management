@@ -13,11 +13,11 @@
     
 
     <div class="card mt-4 ml-3 mr-3">
-        <h5 class="card-header">
+        <!-- <h5 class="card-header">
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addCustomerModal">
                 Add
             </button>
-        </h5>
+        </h5> -->
         
         <div class="card-body">
             <h4 class="card-title"> Details </h4>

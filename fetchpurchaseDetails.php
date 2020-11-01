@@ -17,7 +17,7 @@ $output = array('data' => array());
 
 if($result->num_rows > 0) { 
  while($row = $result->fetch_array()) {
- 	$output['data'][] = array( 		
+    $output['data'][] = array( 		
         $row[0],
         $row[1],
         $row[2],
@@ -25,9 +25,12 @@ if($result->num_rows > 0) {
         $row[4],
         $row[5],
         $row[6],
-        $row[7],
+        $row[7]
+        
      ); 	
  }
 }
 $connect->close();
 echo json_encode($output);
+
+?>
