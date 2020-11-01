@@ -43,7 +43,7 @@
       </li>
       </ul>
       <ul class="navbar-nav">
-      </li><li class="nav-item">
+      <li class="nav-item">
         <a class="nav-link text-white" href="logout.php">Logout</a>
       </li>
       </ul>
