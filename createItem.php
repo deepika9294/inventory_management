@@ -18,8 +18,6 @@ if($_POST) {
 		if($row[0] == $item_name && $row[1] == $brand_id && $row[2] == $category_id){
 			$errors = "Cannot add duplicate data";
 			$check = 1;
-			echo "Cannot add duplicate data!";
-
 			header('location: http://localhost/inventory/inventory.php?error='.$errors);	
 		}  
 			
