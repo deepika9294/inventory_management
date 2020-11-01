@@ -66,6 +66,7 @@
                             WHERE customer_id = '$id' ";
 
                     if($connect->query($sql) === TRUE) {
+                         $_SESSION['msg'] = "Details updated successfully !!";
                          header('location: http://localhost/inventory/customerDetails.php');	
                     }
                     else {
