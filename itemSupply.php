@@ -38,9 +38,7 @@
                         <tr>
                         <th style="text-align: center;">Supplier Name</th>
                         <th style="text-align: center;">Supplier Phone</th>
-                        <th style="text-align: center;">Item Name</th>
-                        <th style="text-align: center;">Brand</th>
-                        <th style="text-align: center;">Category</th>
+                        <th style="text-align: center;">Item Id</th>
                         <th style="text-align: center;">Supply Date</th>
                         <th style="text-align: center;">Delivered Date</th>
                         <th style="text-align: center;">Price</th>

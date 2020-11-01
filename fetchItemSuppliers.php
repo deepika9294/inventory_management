@@ -2,10 +2,7 @@
 
 require_once 'core.php';
 
-$sql = "SELECT supplier_name, supplier_phone, item_name, brand_name, category_name,supplied_date,delivered_date, item_suppliers.price, item_suppliers.quantity  from 
-inventory_items inner join brands on brands.brand_id = inventory_items.brand_id 
-inner join category on category.category_id = inventory_items.category_id 
-inner join item_suppliers on inventory_items.item_id = item_suppliers.item_id 
+$sql = "SELECT supplier_name, supplier_phone, item_id, supplied_date,delivered_date, item_suppliers.price, item_suppliers.quantity  from item_suppliers 
 inner join supplier on supplier.supplier_id = item_suppliers.supplier_id";
 
 
@@ -25,8 +22,6 @@ if($result->num_rows > 0) {
         $row[4],
         $row[5],
         $row[6],
-        $row[7],
-        $row[8]
      ); 	
  }
 }

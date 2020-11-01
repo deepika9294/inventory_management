@@ -159,3 +159,7 @@ CREATE TABLE `item_suppliers` (
 );
 INSERT INTO `item_suppliers`(`supplier_id`,`supplied_date`,`delivered_date`,`price`,`quantity`,`item_id`) VALUES
 (1,STR_TO_DATE('06-01-2019', '%m-%d-%Y'),STR_TO_DATE('08-01-2019', '%m-%d-%Y'), 400, 3 ,8);
+
+
+ALTER TABLE `item_suppliers`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
