@@ -75,7 +75,7 @@ if($_POST) {
     }
     $_SESSION['error'] = $errors;
     $connect->close();
-    header('location : http://localhost/inventory/purchaseDetails.php');
+    header('location: http://localhost/inventory/purchaseDetails.php');
 }                                                                          
 
  
