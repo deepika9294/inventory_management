@@ -29,7 +29,7 @@
             if(isset($_SESSION['error'])){
               foreach ($_SESSION['error'] as $key) {
                 
-                  echo '<div style = "width: 40%;right:1%;margin-top:30px;" class="alert alert-danger alert-dismissible fade show"" role="alert">
+                  echo '<div style = "width: 40%;right:1%;margin-top:30px;" class="alert alert-dark alert-dismissible fade show"" role="alert">
                 '.$key.'<button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button></div>';										
                 
               }
