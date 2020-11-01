@@ -1,3 +1,7 @@
+<?php
+    require_once "core.php"
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
