@@ -97,6 +97,9 @@
 ?>
 
 <html>
+    <head>
+        <link rel="stylesheet" href="./customs/css/add.css">
+    </head>
     <body>
         <div style="margin-top: 8%;" class = "container">
             <h1 style = "text-align:center;"> Update a category </h1><br><br>

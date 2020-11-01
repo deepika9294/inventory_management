@@ -58,6 +58,10 @@
 
 
 <html>
+
+    <head>
+        <link rel="stylesheet" href="./customs/css/add.css">
+    </head>
     <body>
         <div style="margin-top: 8%;" class = "container">
             <h1 style = "text-align:center;"> Add a new Brand </h1><br><br>
