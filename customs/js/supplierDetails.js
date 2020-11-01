@@ -2,7 +2,7 @@ var manageSupplierTable;
 
 $(document).ready(function(){
 
-	manageCustomerTable = $("#manageSupplierTable").DataTable({
+	manageSupplierTable = $("#manageSupplierTable").DataTable({
 		'ajax' : 'fetchSupplier.php',
 		'order' : [],
 		"paging":  false,
