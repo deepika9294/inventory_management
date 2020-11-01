@@ -10,7 +10,7 @@ CREATE TABLE `users` (
   `username` varchar(16) NOT NULL,
   `password` char(8) NOT NULL,
    PRIMARY KEY (user_id)
-)
+);
 
 INSERT INTO  `users` (`user_id`, `username`, `password`) VALUES
 (1, "Akanksha@shah", "Akkushah"),
@@ -51,7 +51,7 @@ CREATE TABLE `inventory_items` (
   `item_id` int(11) NOT NULL,
   `brand_id` int(11) NOT NULL,
   `item_name` varchar(255) NOT NULL,
-  `price` varchar(255) NOT NULL,
+  `price` int(11) NOT NULL,
   `category_id` int(11) NOT NULL
 );
 
@@ -59,8 +59,6 @@ INSERT INTO `inventory_items` (`item_id`, `brand_id`, `item_name`,`price`, `cate
 (4, 5, 'WD Passport', '3000', 3),
 (5,2,'Galaxy S7', "49000",1);
 
-ALTER TABLE `brands`
-  ADD PRIMARY KEY (`brand_id`);
 
 ALTER TABLE `category`
   ADD PRIMARY KEY (`category_id`);
@@ -103,15 +101,19 @@ INSERT INTO `customer`(`customer_id`,`customer_name`,`customer_email`, `customer
 (2, "Deepika Goyal", "deepika@gmail.com", 8934567893, "Pune, Mahrashtra" );
 
 CREATE TABLE `transaction` (
-  transaction_id int(11),
-  date varchar(12),
-  mode varchar(20),
-  discount int(5),
-  selling_price int(10),
-  amount int(10)
+  `transaction_id` int(11),
+  `date` varchar(12),
+  `mode` varchar(20),
+  `discount` int(5),
+  `selling_price` int(10),
+  `amount` int(10),
 
   PRIMARY KEY(`transaction_id`)
 );
+
+
+ALTER TABLE `transaction`
+  MODIFY `transaction_id` int(11) NOT NULL AUTO_INCREMENT;
 
 INSERT INTO `transaction` VALUES
 (1, "17-09-2020", "card", 0, 6000, 6000);
@@ -127,9 +129,4 @@ CREATE TABLE `purchased`(
 
 INSERT INTO `purchased` VALUES
 (4, 1, 2, 1);
-
-
-
-
-a
 
