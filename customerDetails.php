@@ -1,6 +1,6 @@
 <?php
     require_once("includes/header.php");
-    require_once "core.php";
+    require_once("core.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -20,7 +20,19 @@
         </h5>
         
         <div class="card-body">
-            <h4 class="card-title"> Details </h4>
+            <h4 class="card-title"> Customer Details </h4>
+            <div>
+            <?php
+            if(isset($_SESSION['error'])){
+              foreach ($_SESSION['error'] as $key) {
+                  echo '<div style = "width: 40%;right:1%;margin-top:30px;" class="alert alert-danger alert-dismissible fade show"" role="alert">
+                '.$key.'<button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button></div>';										
+                
+              }
+               unset($_SESSION['error']);
+            }
+            ?>
+            </div>
             <div class="card-text">
                 <table class ="tables" id ="manageCustomerTable" style="width:100%;">
                     <thead>
@@ -73,7 +85,7 @@
   <div class="form-group">
     <label class="control-label col-sm-9" for="customer_phone">Phone Number</label>
     <div class="col-sm-9">
-      <input type="text" class="form-control" id="customer_phone" name="customer_phone" placeholder="Enter Phone Number" required>
+      <input type="number" class="form-control" id="customer_phone" name="customer_phone" placeholder="Enter Phone Number" required>
     </div>
   </div>
   <div class="form-group">
