@@ -10,6 +10,16 @@
 </head>
 <body>
 
+<?php if($_GET) {
+        if($_GET['error']) {
+          $value = $_GET['error'];
+          echo '<div style= "width: 40%; margin-top:30px; left: 30%;" class="alert alert-danger alert-dismissible fade show" "row justify-content-center" role="alert">
+          '.$value.'<button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button></div>';			
+        }
+         							
+    
+} ?>
+
 <div class="container">
     
 
