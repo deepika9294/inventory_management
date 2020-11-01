@@ -13,7 +13,7 @@
 <div class="container container-shrinked">
     <div class="card mt-4 ml-3 mr-3">
         <h5 class="card-header">
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addStockModal">
+        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#addStockModal">
             Add
         </button>
         </h5>
@@ -53,7 +53,7 @@
 
     <div class="card mt-4 ml-3 mr-3">
     <h5 class="card-header">
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addItemModal">
+        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#addItemModal">
             Add
         </button>
 
@@ -176,7 +176,7 @@
   </div>
 
   <div class="form-group">
-    <label class="control-label col-sm-3" for="brandName" required>Brand Name:</label>
+    <label class="control-label col-sm-9" for="brandName" required>Brand Name:</label>
     <div class="col-sm-9"> 
       <select class="form-control" id="brandName" name="brandName" required>
         <option value="">---Select---</option>

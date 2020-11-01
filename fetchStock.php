@@ -13,7 +13,7 @@ $output = array('data' => array());
 if($result->num_rows > 0) { 
 
  while($row = $result->fetch_array()) {
- $edit = "<a href='editStock.php?item_id=".$row[0]."&item_name=".$row[1]."'><button class='btn btn-primary'>Edit</button></a>";
+ $edit = "<a href='editStock.php?item_id=".$row[0]."&item_name=".$row[1]."'><button class='btn btn-secondary'>Edit</button></a>";
     if($row[2] < $row[3]){
         $row_1 = "<p class = 'text-danger'><b>".$row[1]."</b></p>";
     }

@@ -99,7 +99,7 @@
 <html>
     <body>
         <div style="margin-top: 8%;" class = "container">
-            <h1 style = "text-align:center;"> Add a new Brand </h1><br><br>
+            <h1 style = "text-align:center;"> Update a category </h1><br><br>
             <?php if($errors) {
             foreach ($errors as $key => $value) {
                 echo '<div style= "width: 40%; margin-top:30px; left: 30%;" class="alert alert-danger alert-dismissible fade show" "row justify-content-center" role="alert">
