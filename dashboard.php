@@ -1,5 +1,6 @@
 <?php
     require_once("includes/header.php");
+    require_once "core.php"
 ?>
 
 <!DOCTYPE html>
@@ -8,37 +9,168 @@
     <link rel="stylesheet" href="./customs/css/dashboard.css">
 </head>
 <body>
-<div class="card mt-4 ml-4 mr-4">
-  <h5 class="card-header">Suppliers</h5>
-  <div class="card-body">
-    <h5 class="card-title">Dummy Text</h5>
-    <p class="card-text">Details(fetched from database)</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-<div class="container">
-    <div class="row">
-        <div class="col-md-6">
-            <div class="card mt-4 ml-4 mr-4">
-                <h5 class="card-header">Suppliers</h5>
-                <div class="card-body">
-                    <h5 class="card-title">Dummy Text</h5>
-                    <p class="card-text">Details(fetched from database)</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
+<!-- ------------------------------------------------------------------------------------------->
+
+<div class="container" style="width: 70%;">
+    
+    <div class="row" style= "margin-top: 40px">
+        <div class="col-md-4">
+        <div class="card text-white bg-primary mb-3" style="max-width: 23rem; min-height:10rem">
+        <div class="card-header">CUSTOMERS</div>
+        <div class="card-body">
+            <p class="card-text" >
+            <?php 
+                $cust_query = "SELECT COUNT(`customer_id`) FROM customer ";
+                $result = $connect->query($cust_query);
+                $count = $result->fetch_array()[0];
+                echo '<div style="font-size: 1.8em; font-family: Times New Roman; color: black; text-align: center"> <strong>COUNT : ';
+                echo $count;
+                echo '</strong></div>';
+            ?></p>
         </div>
-        <div class="col-md-6">
-            <div class="card mt-4 ml-4 mr-4">
-                <h5 class="card-header">Customer</h5>
-                <div class="card-body">
-                    <h5 class="card-title">Dummy Text</h5>
-                    <p class="card-text">Details(fetched from database)</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
         </div>
+        </div>
+        <div class="col-md-4">
+        <div class="card bg-light mb-3" style="max-width: 23rem; min-height:10rem">
+        <div class="card-header">SUPPLIERS</div>
+        <div class="card-body">
+            <p class="card-text">
+            <?php 
+                $cust_query = "SELECT COUNT(`supplier_id`) FROM supplier ";
+                $result = $connect->query($cust_query);
+                $count = $result->fetch_array()[0];
+                echo '<div style="font-size: 1.8em; font-family: Times New Roman; color: black; text-align :center"> <strong>COUNT : ';
+                echo $count;
+                echo '</strong></div>';
+            ?></p>
+            </p>
+        </div>
+        </div>
+        </div>
+        <div class="col-md-4">
+        <div class="card text-white bg-success mb-3" style="max-width: 23rem; min-height:10rem">
+        <div class="card-header">PURCHASES</div>
+        <div class="card-body">
+            <p class="card-text">
+            <?php 
+                $cust_query = "SELECT COUNT(`item_id`) FROM purchased ";
+                $result = $connect->query($cust_query);
+                $count = $result->fetch_array()[0];
+                echo '<div style="font-size: 1.8em; font-family: Times New Roman; color: black; text-align :center"> <strong>COUNT : ';
+                echo $count;
+                echo '</strong></div>';
+            ?>
+            </p>
+        </div>
+        </div>
+        </div>
+        
     </div>
+
+    <div class="row">
+
+        <div class="col-md-6">
+        <div class="card text-white bg-dark mb-3" style="max-width: 35rem; min-height:8rem">
+        <div class="card-header">BRANDS</div>
+        <div class="card-body">
+            <p class="card-text">
+            <?php 
+                $cust_query = "SELECT COUNT(`brand_id`) FROM brands ";
+                $result = $connect->query($cust_query);
+                $count = $result->fetch_array()[0];
+                echo '<div style="font-size: 1.8em; font-family: Times New Roman; color: white; text-align :center"> <strong>COUNT : ';
+                echo $count;
+                echo '</strong></div>';
+            ?>
+            </p>
+        </div>
+        </div>
+        </div>
+        
+
+        <div class="col-md-6">
+        <div class="card text-white bg-dark mb-3" style="max-width: 35rem; min-height:8rem">
+        <div class="card-header">CATEGORY</div>
+        <div class="card-body">
+            <p class="card-text">
+            <?php 
+                $cust_query = "SELECT COUNT(`category_id`) FROM category ";
+                $result = $connect->query($cust_query);
+                $count = $result->fetch_array()[0];
+                echo '<div style="font-size: 1.8em; font-family: Times New Roman; color: white; text-align :center"> <strong>COUNT : ';
+                echo $count;
+                echo '</strong></div>';
+            ?>
+            </p>
+        </div>
+        </div>
+        </div>
+      </div>  
+
+      <div class="row ">
+        <div class="col-md-4">
+        <div class="card text-white bg-success mb-3" style="max-width: 23rem;min-height:10rem">
+        <div class="card-header">INVENTORY ITEMS</div>
+        <div class="card-body">
+            <p class="card-text">
+            <?php 
+                $cust_query = "SELECT COUNT(`item_id`) FROM inventory_items ";
+                $result = $connect->query($cust_query);
+                $count = $result->fetch_array()[0];
+                echo '<div style="font-size: 1.8em; font-family: Times New Roman; color: black; text-align :center"> <strong>COUNT : ';
+                echo $count;
+                echo '</strong></div>';
+            ?>
+            </p>
+        </div>
+        </div>
+        </div>
+        <div class="col-md-4">
+        <div class="card bg-light mb-3" style="max-width: 23rem; min-height:10rem">
+        <div class="card-header">INVENTORY STOCK</div>
+        <div class="card-body">
+            <p class="card-text">
+            <?php 
+                $cust_query = "SELECT COUNT(`item_id`) FROM item_stocks ";
+                $result = $connect->query($cust_query);
+                $count = $result->fetch_array()[0];
+                echo '<div style="font-size: 1.8em; font-family: Times New Roman; color: black; text-align :center"> <strong>COUNT : ';
+                echo $count;
+                echo '</strong></div>';
+            ?>
+            </p>
+        </div>
+        </div>
+        </div>
+        <div class="col-md-4">
+        <div class="card text-white bg-primary mb-3" style="max-width: 23rem;min-height:10rem">
+        <div text-align: center class="card-header">TRANSACTIONS</div>
+        <div class="card-body">
+            <p class="card-text">
+            <?php 
+                $cust_query = "SELECT COUNT(`transaction_id`) FROM `transaction` ";
+                $result = $connect->query($cust_query);
+                $count = $result->fetch_array()[0];
+                echo '<div style="font-size: 1.8em; font-family: Times New Roman; color: black; text-align :center"> <strong>COUNT : ';
+                echo $count;
+                echo '</strong></div>';
+            ?>
+            </p>
+        </div>
+        </div>
+        </div>
+        
+    </div>
+
 </div>
+
+
+
+<!-- ---------------------------------------------------------------- -->
+
+
+
+
+
 </body>
 </html>
