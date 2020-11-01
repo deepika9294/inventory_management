@@ -41,7 +41,15 @@
     </div>
 
 
-
+<?php if($_GET) {
+        if($_GET['error']) {
+          $value = $_GET['error'];
+          echo '<div style= "width: 40%; margin-top:30px; left: 30%;" class="alert alert-danger alert-dismissible fade show" "row justify-content-center" role="alert">
+          '.$value.'<button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button></div>';			
+        }
+         							
+    
+} ?>
 
     <div class="card mt-4 ml-3 mr-3">
     <h5 class="card-header">
@@ -81,6 +89,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
+      
         <h5 class="modal-title" id="exampleModalLabel">Add item in a stock</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
