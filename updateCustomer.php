@@ -66,6 +66,7 @@
                             WHERE customer_id = '$id' ";
 
                     if($connect->query($sql) === TRUE) {
+                         $_SESSION['msg'] = "Details updated successfully !!";
                          header('location: http://localhost/inventory/customerDetails.php');	
                     }
                     else {
@@ -83,9 +84,6 @@
 ?>
 
 <html>
-    <head>
-            <link rel="stylesheet" href="./customs/css/add.css">
-    </head>
     <body>
         <div style="margin-top: 6%;" class = "container">
             <h1 style = "text-align:center;"> Update Details </h1><br><br>
