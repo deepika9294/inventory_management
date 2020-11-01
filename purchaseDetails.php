@@ -106,49 +106,49 @@
       <div class="modal-body">
         <div id="add-item-messages"></div>
 
-       <!-- <div class="form-group">
+       <div class="form-group">
   <label class="control-label col-sm-9" for="customer_name">Customer Name</label>
     <div class="col-sm-9">
       <input type="text" class="form-control" id="customer_name" name="customer_name" placeholder="Enter Customer Name" required>
     </div>
-  </div> -->
-  <div class="form-group">
-                <label class="control-label col-sm-9" for="customer_id">Supplier Name:</label>
+  </div>
+  <!-- <div class="form-group">
+                <label class="control-label col-sm-9" for="customer_id">Customer Name:</label>
                     <div class="col-sm-9">
                     <select class="form-control" id="customer_id" name="customer_id" required>
                         <option value="">---Select---</option>
                         <?php
-                        $sql = "SELECT customer_id, customer_name FROM customer";
-                        $result = $connect->query($sql);
-                        while ($row = $result->fetch_array()){
-                        echo "<option value='".$row[0]."'>".$row[1]."</option>";
-                        }
+                        // $sql = "SELECT customer_id, customer_name FROM customer";
+                        // $result = $connect->query($sql);
+                        // while ($row = $result->fetch_array()){
+                        // echo "<option value='".$row[0]."'>".$row[1]."</option>";
+                        // }
                         ?>
                     </select>
                     
                     </div>
-      </div>
+      </div> -->
 
-   <!-- <div class="form-group">
+   <div class="form-group">
     <label class="control-label col-sm-9" for="customer_phone">Phone</label>
     <div class="col-sm-9">
       <input type="number"  class="form-control" id="customer_phone" name="customer_phone" placeholder="Enter Phone Number" required>
     </div>
-  </div> -->
+  </div>
 
-  <!-- <div class="form-group">
+  <div class="form-group">
     <label class="control-label col-sm-9" for="customer_email">Email</label>
     <div class="col-sm-9">
       <input type="email" class="form-control" id="customer_email" name="customer_email" placeholder="Enter Email" required>
     </div>
-  </div> -->
+  </div>
 
-  <!-- <div class="form-group">
+  <div class="form-group">
     <label class="control-label col-sm-9" for="customer_address">Address</label>
     <div class="col-sm-9">
       <input type="text" class="form-control" id="customer_address" name="customer_address" placeholder="Enter Address" required>
     </div>
-  </div> -->
+  </div>
 
   <div class="form-group">
     <label class="control-label col-sm-9" for="date">Date</label>
